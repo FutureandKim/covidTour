@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head><title>country</title>
+        <style>
+            body{
+                background-color:rgba(106, 238, 255, 0.288);
+            } 
+            /*배경색*/
+
+            /*절대배치 활용-대륙 이름과 사진이 매치되도록*/
+            div{
+                display:inline-block;
+                position:absolute;
+            }
+            div>p{
+                display: inline-block;
+                position:absolute;
+                height:25px;
+                width:100px;
+                border-radius: 10px;
+                background:rgb(236, 233, 190);
+                text-align: center;
+            }
+
+            /*체크리스트 관련*/
+            #check{
+                position:absolute;
+                height:25px;
+                width:300px;
+                right:2px;
+                bottom:2px;
+                text-align: left;
+                background:none;
+                font-size:large;
+                font-weight: bold;
+            }
+            /*체크리스트는 글씨 위에 마우스 올라가면 보이도록 처리*/
+            #check:hover{
+                background:rgba(255, 192, 203, 0.883);
+                font-size:large;
+                height:300px;
+                width:300px;
+                padding:20px;
+                font-weight: bold;
+            } 
+
+            /*링크관련 내용*/
+            a:link{
+                color:black;
+                text-decoration: none;}
+            a:visited{
+                color:black;
+                text-decoration: none;}
+            a:hover{
+                color:rgb(107, 106, 116);}
+                        
+        </style>
+        <script>
+            function over(){
+                const str = "<출국 필수리스트> <br><br>1. 여권 <br>2. COVID-19 PCR 음성확인서 <br>&emsp;&emsp;- 출발일 기준 72시간 이내 발급 <br>&emsp;&emsp;- 한국어/영어 출력본 <br> 3. 백신 접종 증명서<br>&emsp;&emsp;- 접종 완료 후 14일 경과<br>&emsp;&emsp;- 한국어/영어 출력본, 전자사본 <br>4. 마스크<br>5. 손소독제, 손소독 물티슈";
+                check.innerHTML = str;}
+
+            function out(){
+                check.innerHTML = "!! 출국 필수리스트 !!";
+            }            
+        </script>
+        <script src="0_country.js"></script>
+    </head>
+    <body>
+        <div>
+            <img src="https://cdn.pixabay.com/photo/2013/07/12/12/54/world-map-146505_1280.png" width="1600" height="880"> <!--대륙 이미지-->
+            <!--각 대륙 이름, 사진의 대륙과 알맞게 배치되도록 위치 설정-->
+            <p style="left:150px; top:200px"><a href="1_northA.html" target="_blank"><b>북아메리카</b></a></p>
+            <p style="left:350px; top:600px"><a href="1_southA.html" target="_blank"><b>남아메리카</b></a></p>
+            <p style="left:770px; top:400px"><a href="1_africa.html" target="_blank"><b>아프리카</b></a></p>
+            <p style="right:300px; top:200px"><a href="1_asia.html" target="_blank"><b>아시아</b></a></p>
+            <p style="right:55px; bottom:150px"><a href="1_oceania.html" target="_blank"><b>오세아니아</b></a></p>
+            <p style="left:880px; top:180px"><a href="1_europe.html" target="_blank"><b>유럽</b></a></p>
+            <p id="check" onmouseover="over()" onmouseout="out()">!! 출국 필수리스트 !!</p>
+        </div>
+    </body>
+</html>

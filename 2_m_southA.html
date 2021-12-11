@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>right</title>
+        <style>
+            /*표 관련 문법*/
+            table{
+                width:50%;
+                border-collapse:collapse;
+                border:none;
+                border-bottom:1px rgb(25, 4, 95);
+                border-top:1px rgb(25, 4, 95);
+
+            }
+            th{
+                text-align:left;
+                padding:5px;
+                border-left:none;
+                border-right:none;
+
+            }
+            h3{
+                text-align:left
+            }
+
+            /*나라 이름 클릭시*/
+            a:link{
+                text-decoration: none;
+                color:black;
+            }
+            a:visited{
+                color:black;
+                text-decoration:none;}
+            a:hover{
+
+                color:rgb(182, 44, 44);
+                text-decoration-color: black;
+            }
+        </style>
+
+    </head>
+    <iframe src="0_country.html" width="1170" height="500" frameborder=0></iframe>
+    <!--iframe으로 대륙선택할 수 있는 페이지 표시-->
+    <table border="1">
+        <caption><h3>&emsp;남미 여행가능 국가</h3></caption>
+        <tbody>
+            <tr><th><a href="https://covid19.map.naver.com/?nation=ARG" target="covid"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/225px-Flag_of_Argentina.svg.png" width=50px;>&emsp;아르헨티나</a></th><th><a href="https://covid19.map.naver.com/?nation=PAN" target="covid"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Flag_of_Panama.svg/225px-Flag_of_Panama.svg.png" width=50px;>&emsp;파나마</a></th></tr>
+            <tr><th><a href="https://covid19.map.naver.com/?nation=PRY" target="covid"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Flag_of_Paraguay.svg/225px-Flag_of_Paraguay.svg.png" width=50px;>&emsp;파라과이</a></th><th><a href="https://covid19.map.naver.com/?nation=MEX" target="covid"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/225px-Flag_of_Mexico.svg.png" width=50px;>&emsp;멕시코</a></th></tr>
+            <tr><th><a href="https://covid19.map.naver.com/?nation=LCA" target="covid"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Saint_Lucia.svg/225px-Flag_of_Saint_Lucia.svg.png" width=50px;>&emsp;세인트루시아</a></th><th></th></tr>
+        </tbody>
+    </table>
+    <!--표에 국기와 자가격리 없는 나라 정리-->
+    <!--각 국기 또는 나라이름 클릭시 covid라는 이름의 iframe에서 각 나라의 확진자 현황 표시-->
+    <br>
+    <h3>코로나 현황(나라 클릭)</h3>
+    <iframe name="covid" src="blank.html" width="600" height="400" frameborder=0></iframe>
+</html>

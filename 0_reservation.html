@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head><title>reservation</title>
+        <style>
+            body{
+                background-image: url("airplane.PNG");
+                background-repeat: no-repeat;
+                background-size: cover;
+            } /*배경이미지*/
+
+
+            h2{
+                text-align: center;
+            }
+
+            /*네비게이션 메인바*/
+            nav ul{
+                margin: auto;
+                width: 70%;
+                background-color: rgb(255, 199, 95);
+                border-radius:35px;
+                list-style-type: none;
+                text-align: center;   
+            }
+
+            nav ul li{
+                display:inline-block;
+            }
+
+            .down{
+                position:relative;
+            }
+            .down a{
+                text-decoration: none;
+            }
+
+            /*국내 항공사에 들어있는 메뉴들(대한항공, 아시아나)표시 관련*/
+            .down-menu{
+                color:black;
+            }
+            .down-menu:hover{
+                color: rgb(109, 106, 106);
+            }
+
+            /*대한항공, 아시아나 세부 속성들*/
+            .content{
+                position:absolute;
+                background-color: rgba(255, 255, 255, 0.356);
+                width: 160px;
+                box-shadow: 0px 8px 16px 0px grey;
+                display:none;
+            }
+            .content a{
+                color:black;
+                padding: 25px 25px;
+                text-decoration: none;
+                display: block;
+            }
+
+            .down:hover .content{
+                display: block;
+            }            
+        </style>
+        <script>
+            function q1(){
+                var ret = confirm("대한항공에서 예약하시겠습니까?");
+                return ret;
+            }
+            function q2(){
+                var retu = confirm("아시아나에서 예약하시겠습니까?");
+                return retu;
+            }
+            function q3(){
+                var retur = confirm("국외 항공사를 이용하시겠습니까?");
+                return retur;
+
+            }
+        </script>
+
+    </head>
+    <body>
+        <br><br><br><br><br><br><br>
+            <nav>
+                <ul>
+                    <li class="down">
+                        <div class="down-menu"><h2><b>&emsp;국내항공사</b></h2></div>
+                        <div class="content"> <!--국내 항공사 관련 메뉴들-->
+                            <a href="https://www.koreanair.com" onclick="return q1()"><b>대한항공</b></a>
+                            <a href="https://m.flyasiana.com/C/KR/KO/index" onclick="return q2()"><b>아시아나</b></a>
+                        </div>
+                    </li>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                    <li class="down">
+                        <a href="https://flight.naver.com/" onclick="return q3()"><div class="down-menu"><h2><b>국외항공사&emsp;&emsp;</b></h2></div></li></a>
+                </ul>
+        </p>
+   
+    </body>
+</html>
